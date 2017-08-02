@@ -1,6 +1,6 @@
 1) git init
 
-Вывод:
+Вывод: 
 Initialized empty Git repository in /root/Desktop/trainee/.git/
 
 2) git config --global user.name "Султанова Ольга"
@@ -20,7 +20,7 @@ core.logallrefupdates=true
    git remote add origin https://github.com/Olya48912/trainee.git
    git push -u origin master
 
-Вывод:
+Вывод: 
 Counting objects: 3, done.
 Writing objects: 100% (3/3), 228 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
@@ -28,12 +28,13 @@ To https://github.com/olya48912/trainee.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 
+
 4) touch task1.1
    git add .
    git commit -m "added file task1.1"
    git status
 
-Вывод:
+Вывод: 
 [master 3426ff3] added file task1.1
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 task1.1
@@ -46,22 +47,90 @@ nothing to commit, working directory clean
    git revert HEAD
    git reset --hard 8a61b8fbe8a68158b4e1224fc415af74fc0f58c9
 
-Вывод:
+Вывод: 
 HEAD is now at 8a61b8f Init
 
    git status
 
-Вывод:
+Вывод: 
 On branch master
 Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
 
    git log
 
-Вывод:
+Вывод: 
 commit 8a61b8fbe8a68158b4e1224fc415af74fc0f58c9
 Author: Султанова Ольга <sultanova@reg.ru>
 Date:   Wed Aug 2 14:55:00 2017 +0700
 
     Init
 
+5) touch task1.1_answer
+   git add -A
+   git commit -m "added a file with answers"
+   git push
+  
+6) git clone https://github.com/olya48912/trainee.git
+
+7) cat > fileA << "EOF"
+   Random string
+   EOF
+
+   cat > fileB << "EOF"
+   The different random string 
+   EOF
+
+   git add fileA
+   git add fileB
+   git commit -m "added 2 new files"
+   git status
+
+Вывод:
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   fileA
+	new file:   fileB
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   task1.1_answer
+
+8) git status
+
+Вывод: 
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   fileA
+	new file:   fileB
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   fileA
+	deleted:    fileB
+	modified:   task1.1_answer
+
+   git add -A
+   git status
+
+Вывод:
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   fileA
+	modified:   task1.1_answer
+
+   git commit -m "added fileA, modified task with answers"
+   git push
