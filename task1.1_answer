@@ -188,3 +188,10 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
    git add -A
    git commit -m "fixed conflicts" 
    git push
+
+10) git rev-list -n 1 HEAD  -- fileB
+
+Вывод:
+c8603ccf3f6ede17118a051304d781ed7cf8ccce
+
+   git checkout c8603ccf3f6ede17118a051304d781ed7cf8ccce^ -- fileB 
