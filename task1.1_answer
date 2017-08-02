@@ -65,3 +65,44 @@ Date:   Wed Aug 2 14:55:00 2017 +0700
 
     Init
 
+5) touch task1.1_answer
+   git add -A
+   git commit -m "added a file with answers"
+   git push
+
+6) git clone https://github.com/olya48912/trainee.git
+
+7) cat > fileA << "EOF"
+   > Random string
+   > EOF
+
+   cat > fileB << "EOF"
+   > The different random string
+   > EOF
+
+   git add fileA
+   git add fileB
+   git commit -m "added 2 new files"
+   git status
+
+Вывод:
+[master d7552fb] added 2 new files
+ 2 files changed, 2 insertions(+)
+ create mode 100644 fileA
+ create mode 100644 fileB
+root@debian:~/Desktop/direction2/trainee# git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   task1.1_answer
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+   git push
+   git pull (из первого репозитория)
+
+
