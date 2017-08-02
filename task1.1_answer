@@ -28,7 +28,6 @@ To https://github.com/olya48912/trainee.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 
-
 4) touch task1.1
    git add .
    git commit -m "added file task1.1"
@@ -70,16 +69,16 @@ Date:   Wed Aug 2 14:55:00 2017 +0700
    git add -A
    git commit -m "added a file with answers"
    git push
-  
+
 6) git clone https://github.com/olya48912/trainee.git
 
 7) cat > fileA << "EOF"
-   Random string
-   EOF
+   > Random string
+   > EOF
 
    cat > fileB << "EOF"
-   The different random string 
-   EOF
+   > The different random string
+   > EOF
 
    git add fileA
    git add fileB
@@ -87,40 +86,26 @@ Date:   Wed Aug 2 14:55:00 2017 +0700
    git status
 
 Вывод:
+[master d7552fb] added 2 new files
+ 2 files changed, 2 insertions(+)
+ create mode 100644 fileA
+ create mode 100644 fileB
+root@debian:~/Desktop/direction2/trainee# git status
 On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	new file:   fileA
-	new file:   fileB
-
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   task1.1_answer
+        modified:   task1.1_answer
 
-8) git status
+no changes added to commit (use "git add" and/or "git commit -a")
 
-Вывод: 
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
+   git push
+   git pull (из первого репозитория)
 
-	new file:   fileA
-	new file:   fileB
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	modified:   fileA
-	deleted:    fileB
-	modified:   task1.1_answer
-
-   git add -A
+8) git add -A
    git status
 
 Вывод:
@@ -129,8 +114,75 @@ Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-	new file:   fileA
-	modified:   task1.1_answer
+        modified:   fileA
+        deleted:    fileB
+        modified:   task1.1_answer
 
    git commit -m "added fileA, modified task with answers"
+   git push
+
+9) git log (второй репозиторий)
+
+Вывод:
+commit d7552fbd361fead7a5b5bf23d7a0f737259c7187
+Author: Султанова Ольга <sultanova@reg.ru>
+Date:   Wed Aug 2 15:25:26 2017 +0700
+
+    added 2 new files
+
+commit 63f523149ef922eefa20d110814b6e9570c1519e
+Author: Султанова Ольга <sultanova@reg.ru>
+Date:   Wed Aug 2 15:18:22 2017 +0700
+
+    added a file with answers
+
+commit 8a61b8fbe8a68158b4e1224fc415af74fc0f58c9
+Author: Султанова Ольга <sultanova@reg.ru>
+Date:   Wed Aug 2 14:55:00 2017 +0700
+Date:   Wed Aug 2 14:55:00 2017 +0700
+
+    Init
+
+   git log (первый репозиторий)
+
+Вывод:
+commit c8603ccf3f6ede17118a051304d781ed7cf8ccce
+Author: Султанова Ольга <sultanova@reg.ru>
+Date:   Wed Aug 2 15:35:46 2017 +0700
+
+    added fileA, modified task with answers
+
+commit d7552fbd361fead7a5b5bf23d7a0f737259c7187
+Author: Султанова Ольга <sultanova@reg.ru>
+Date:   Wed Aug 2 15:25:26 2017 +0700
+
+    added 2 new files
+
+commit 63f523149ef922eefa20d110814b6e9570c1519e
+Author: Султанова Ольга <sultanova@reg.ru>
+Date:   Wed Aug 2 15:18:22 2017 +0700
+
+    added a file with answers
+
+commit 8a61b8fbe8a68158b4e1224fc415af74fc0f58c9
+Author: Султанова Ольга <sultanova@reg.ru>
+Date:   Wed Aug 2 14:55:00 2017 +0700
+
+    Init
+
+   git add .
+   git commit -m "added more answers in file"
+   git push
+
+Вывод:
+To https://github.com/olya48912/trainee.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/olya48912/trainee.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+   git pull
    git push
