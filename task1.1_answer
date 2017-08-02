@@ -195,3 +195,36 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 c8603ccf3f6ede17118a051304d781ed7cf8ccce
 
    git checkout c8603ccf3f6ede17118a051304d781ed7cf8ccce^ -- fileB 
+
+12) git checkout -b "feature1"
+    git add -A
+    git commit -m "created new branch"
+    git push --set-upstream origin feature1
+
+13) git chekout -b "feature2"
+
+14) git checkout master
+    git pull
+    git merge feature1
+    git add -A
+    git commit
+    git push
+
+15) git checkout feature2
+    git branch
+
+Вывод:
+  feature1
+* feature2
+  master
+ 
+    git remote show https://github.com/Olya48912/trainee/
+
+Вывод:
+* remote https://github.com/Olya48912/trainee/
+  Fetch URL: https://github.com/Olya48912/trainee/
+  Push  URL: https://github.com/Olya48912/trainee/
+  HEAD branch: master
+  Local refs configured for 'git push':
+    feature1 pushes to feature1 (up to date)
+    master   pushes to master   (up to date)
