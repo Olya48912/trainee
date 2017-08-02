@@ -228,3 +228,17 @@ c8603ccf3f6ede17118a051304d781ed7cf8ccce
   Local refs configured for 'git push':
     feature1 pushes to feature1 (up to date)
     master   pushes to master   (up to date)
+
+    git add -A
+    git commit
+    git push
+
+16) git pull
+    git reset --hard 5ca81bb1efdd5ceb6a67adceb129d10e34e2d3cd
+    git merge feature2
+    
+17) git log --graph
+    git push origin --delete feature1
+
+18) git tag v1.0
+
